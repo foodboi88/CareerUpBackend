@@ -19,4 +19,5 @@ class MarkUnitCrud(Crud, Base):
                 .where(cls.mark <= mark)
                 .where(cls.unit_id == unit_id)
                 .where(cls.specialized_of_school_id == specialized_of_school_id)
+                .order_by(cls.mark.desc())
         )
